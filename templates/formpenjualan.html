@@ -1,0 +1,52 @@
+{% include 'header.html'%}
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Transaksi Penjualan</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item active"><a href="/datapenjualan">Data</a></li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+      <form role="form" action="/add" method="POST">
+      <div class="row">
+        <div class="col-sm-3">
+          <!-- select -->
+          <div class="form-group">
+            <label>Kode Menu</label>
+            <select class="form-control" id="menu" name="menu">
+              {% for row in list_menu %}
+              <option value="{{row.1}}" >{{row.1}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label>Qty</label>
+            <select class="form-control" id="num" name="num">
+              {% for i in range(1,10) %}
+              <option value="{{i}}"  >{{i}}</option>
+              {% endfor%}
+            </select>
+          </div>
+        </div>
+        <a href="">
+        <button type="submit" class="btn btn-info btn-xs" style="height:70px;width:70px; padding: 25px 10px;" >Submit</button>
+        </a>
+      </div>
+      </form>
+     
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  {% include 'footer.html'%}

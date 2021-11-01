@@ -1,0 +1,63 @@
+{% include 'header.html'%}
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Master Supplier</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="/formmastersupplier">Tambah Barang</a></li>
+          <li class="breadcrumb-item active"><a href="/mastersupplier">Data</a></li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>                  
+                    <tr>
+                      <th>#</th>
+                      <th>Barang</th>
+                      <th>Harga Satuan</th>
+                      <th>Qty</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for rs in data %}
+                    <tr>
+                      <td>{{loop.index}}</td>
+                      <td>{{rs.1}}</td>
+                      <td>{{rs.2}}</td>
+                      <td>{{rs.3}}</td>
+                      <td>{{rs.2*rs.3}}</td>
+                      <td>
+                        <a href="/hapussupplier/{{rs.0}}" class="btn btn-danger btn-xs" onclick="confirm('data{{rs.1}} dihapus?')">hapus</a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  {% include 'footer.html'%}
