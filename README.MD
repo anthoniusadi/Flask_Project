@@ -1,3 +1,7 @@
+# first thing todo
+virtualenv name_env --python=python3.8
+pip install pip --upgrade
+
 # Requirement
 
 * python

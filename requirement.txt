@@ -1,0 +1,9 @@
+pip install Flask
+
+pip install Flask-MySQLdb
+
+# if error then try this then retype install Flask-MySQLdb
+==== sudo apt-get install python-dev libmysqlclient-dev ====
+#
+
+pip install pdfkit
