@@ -41,11 +41,11 @@
                     {% for rs in data %}
                     <tr>
                       <td>{{loop.index}}</td>
+                      <td>{{rs.0}}</td>
                       <td>{{rs.1}}</td>
                       <td>{{rs.2}}</td>
                       <td>{{rs.3}}</td>
-                      <td>{{rs.4}}</td>
-                      <td>{{rs.3-rs.4}}</td>
+                      <td>{{rs.2-rs.3}}</td>
                       <td>
                         <a href="/hapusbarang/{{rs.0}}" class="btn btn-danger btn-xs" onclick="confirm('data {{rs.1}} dihapus?')">hapus</a>
                       </td>

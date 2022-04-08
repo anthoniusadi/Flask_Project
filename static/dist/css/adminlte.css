@@ -67,6 +67,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #ffffff;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -11456,6 +11457,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 
 .content-wrapper {
   background: #f4f6f9;
+
 }
 
 .content-wrapper > .content {
